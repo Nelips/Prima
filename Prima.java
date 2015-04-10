@@ -29,14 +29,14 @@ public class Prima {
         }
         System.out.print("Deret bilangan priman antara " + a + " dan " + b + " yaitu: ");
         boolean prime = true;
-        while(a<=b){
-            c=a-1;
-            if(c!=1 || c!=0 || a==1 || a==2)
+        while(b<=a){
+            c=b-1;
+            if(c!=1 || c!=0 || b!=1 || b!=2)
                 while(c>1){
-                    if(a%c==0) prime = false;
+                    if(b%c==0) prime = false;
                     c--;
                 }
-            if(prime==true) System.out.print(a + ", ");
+            if(prime==true) System.out.print(b + ", ");
             prime=true;
             a++;
         }
