@@ -27,19 +27,21 @@ public class Prima {
             a=b;
             b=c;
         }
-        System.out.print("Deret bilangan priman antara " + a + " dan " + b + " yaitu: ");
+        int total=0;
+        System.out.print("Total bilangan priman antara " + a + " dan " + b + " yaitu: ");
         boolean prime = true;
         while(a<=b){
             c=a-1;
-            if(c!=1 || c!=0 || a==1 || a==2)
+            if(c!=1 || c!=0 || a!=1 || a!=2)
                 while(c>1){
                     if(a%c==0) prime = false;
                     c--;
                 }
-            if(prime==true) System.out.print(a + ", ");
+            if(prime==true) total=total+a;
             prime=true;
             a++;
         }
+        System.out.print(total + " ");
         
     }
     
